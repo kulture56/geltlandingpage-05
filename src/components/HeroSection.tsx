@@ -1,7 +1,23 @@
+
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { X } from "lucide-react";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const HeroSection = () => {
+  const [showNotification, setShowNotification] = useState(true);
+  const { toast } = useToast();
+  
+  const dismissNotification = () => {
+    setShowNotification(false);
+    toast({
+      title: "Notification dismissed",
+      description: "You can always check your notifications in the app",
+      duration: 3000,
+    });
+  };
+  
   return (
     <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
       <div className="container px-4 mx-auto">
@@ -38,21 +54,30 @@ const HeroSection = () => {
                   className="w-full h-auto rounded-3xl shadow-lg"
                 />
                 
-                {/* iOS Notification */}
-                <div className="absolute top-[130px] left-1/2 transform -translate-x-1/2 w-[90%] bg-white/90 backdrop-blur-sm rounded-xl shadow-md p-3 animate-fade-in">
-                  <div className="flex items-start gap-3">
-                    <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold shrink-0">
-                      G
-                    </div>
-                    <div>
-                      <div className="font-semibold text-sm">John Makau</div>
-                      <div className="text-gray-500 text-xs">2 minutes ago</div>
-                      <p className="text-sm mt-1 text-left">
-                        Just invested in <span className="text-geltPurple font-medium">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
-                      </p>
+                {/* iOS Notification - Repositioned with better design */}
+                {showNotification && (
+                  <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 w-[90%] bg-white/90 backdrop-blur-sm rounded-xl shadow-md p-3 animate-fade-in">
+                    <div className="flex items-start gap-3 relative">
+                      <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold shrink-0">
+                        G
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-sm">John Makau</div>
+                        <div className="text-gray-500 text-xs">2 minutes ago</div>
+                        <p className="text-sm mt-1 text-left">
+                          Just invested in <span className="text-geltPurple font-medium">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
+                        </p>
+                      </div>
+                      <button 
+                        onClick={dismissNotification}
+                        className="absolute top-0 right-0 p-1 rounded-full hover:bg-gray-200 transition-colors"
+                        aria-label="Dismiss notification"
+                      >
+                        <X className="h-4 w-4 text-gray-500" />
+                      </button>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
               
               {/* Conversation bubbles below the phone - keep a few for social proof */}
