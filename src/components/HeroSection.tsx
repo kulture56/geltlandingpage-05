@@ -1,5 +1,5 @@
-
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   return (
@@ -29,21 +29,38 @@ const HeroSection = () => {
           </div>
           <div className="w-full md:w-1/2 relative">
             <div className="relative z-10 md:ml-10 animate-slide-up">
-              <div className="bg-white shadow-xl rounded-2xl p-4 border border-gray-100 mb-4 transform hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">JM</div>
-                  <div>
-                    <div className="font-medium">John Makau</div>
-                    <div className="text-gray-500 text-sm">2 minutes ago</div>
-                    <p className="mt-2">
-                      Just invested in <span className="hashtag">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
-                    </p>
+              {/* iPhone with notification overlay */}
+              <div className="relative mx-auto w-full max-w-[320px]">
+                {/* iPhone image */}
+                <img 
+                  src="/lovable-uploads/0199a015-c35b-4921-affa-55488db74432.png" 
+                  alt="iPhone lock screen" 
+                  className="w-full h-auto rounded-3xl shadow-lg"
+                />
+                
+                {/* iOS Notification */}
+                <div className="absolute top-[130px] left-1/2 transform -translate-x-1/2 w-[90%] bg-white/90 backdrop-blur-sm rounded-xl shadow-md p-3 animate-fade-in">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold shrink-0">
+                      G
+                    </div>
+                    <div>
+                      <div className="font-semibold text-sm">John Makau</div>
+                      <div className="text-gray-500 text-xs">2 minutes ago</div>
+                      <p className="text-sm mt-1 text-left">
+                        Just invested in <span className="text-geltPurple font-medium">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="bg-white shadow-xl rounded-2xl p-4 border border-gray-100 mb-4 ml-8 transform hover:-translate-y-1 transition-transform duration-300">
+              
+              {/* Conversation bubbles below the phone - keep a few for social proof */}
+              <div className="hidden md:block bg-white shadow-xl rounded-2xl p-4 border border-gray-100 mb-4 ml-8 transform hover:-translate-y-1 transition-transform duration-300 mt-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">WN</div>
+                  <Avatar className="w-10 h-10 bg-geltPurple-light text-geltPurple">
+                    <AvatarFallback>WN</AvatarFallback>
+                  </Avatar>
                   <div>
                     <div className="font-medium">Wanjiku Njeri</div>
                     <div className="text-gray-500 text-sm">5 minutes ago</div>
@@ -53,9 +70,11 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-white shadow-xl rounded-2xl p-4 border border-gray-100 ml-4 transform hover:-translate-y-1 transition-transform duration-300">
+              <div className="hidden md:block bg-white shadow-xl rounded-2xl p-4 border border-gray-100 ml-4 transform hover:-translate-y-1 transition-transform duration-300">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">DO</div>
+                  <Avatar className="w-10 h-10 bg-geltPurple-light text-geltPurple">
+                    <AvatarFallback>DO</AvatarFallback>
+                  </Avatar>
                   <div>
                     <div className="font-medium">David Omondi</div>
                     <div className="text-gray-500 text-sm">10 minutes ago</div>
