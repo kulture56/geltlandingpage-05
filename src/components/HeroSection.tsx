@@ -28,27 +28,41 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="w-full md:w-1/2 relative">
-            <div className="relative z-10 md:ml-10 animate-slide-up flex justify-center">
-              {/* iPhone with notification overlay */}
-              <div className="relative">
-                <img 
-                  src="/lovable-uploads/b8cb11d4-933e-44b4-b088-9e819e6adf94.png" 
-                  alt="iPhone showing GELT notification" 
-                  className="max-w-[280px] md:max-w-[320px] rounded-3xl shadow-lg"
-                />
-                {/* Notification overlay */}
-                <div className="absolute top-[22%] left-1/2 -translate-x-1/2 w-[85%] bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-3 border border-white/30 animate-fade-in">
-                  <div className="flex items-start gap-2">
-                    <div className="w-8 h-8 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold text-xs shrink-0">JM</div>
-                    <div>
-                      <div className="font-medium text-sm">John Makau</div>
-                      <div className="text-gray-500 text-xs">2 minutes ago</div>
-                      <p className="mt-1 text-sm">
-                        Just invested in <span className="hashtag">&#35;SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
-                      </p>
-                    </div>
+            <div className="relative z-10 md:ml-10 animate-slide-up">
+              <div className="bg-white shadow-xl rounded-2xl p-4 border border-gray-100 mb-4 transform hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">JM</div>
+                  <div>
+                    <div className="font-medium">John Makau</div>
+                    <div className="text-gray-500 text-sm">2 minutes ago</div>
+                    <p className="mt-2">
+                      Just invested in <span className="hashtag">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
+                    </p>
                   </div>
-                  <div className="absolute -bottom-1 right-3 w-8 h-3 bg-geltPurple/20 rounded-full blur-sm"></div>
+                </div>
+              </div>
+              <div className="bg-white shadow-xl rounded-2xl p-4 border border-gray-100 mb-4 ml-8 transform hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">WN</div>
+                  <div>
+                    <div className="font-medium">Wanjiku Njeri</div>
+                    <div className="text-gray-500 text-sm">5 minutes ago</div>
+                    <p className="mt-2">
+                      Rafiki AI just helped me understand <span className="hashtag">#CRYPTO</span> basics. So easy to follow! Who else is learning?
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white shadow-xl rounded-2xl p-4 border border-gray-100 ml-4 transform hover:-translate-y-1 transition-transform duration-300">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">DO</div>
+                  <div>
+                    <div className="font-medium">David Omondi</div>
+                    <div className="text-gray-500 text-sm">10 minutes ago</div>
+                    <p className="mt-2">
+                      My <span className="hashtag">#STOCKS</span> portfolio is up 15% since joining GELT's expert webinars. Tuko pamoja! 💪🏾
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

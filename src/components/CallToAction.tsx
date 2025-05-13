@@ -18,9 +18,6 @@ const CallToAction = () => {
               Learn More
             </Button>
           </div>
-          <div className="mt-8 text-sm opacity-75">
-            <p>Real-time community updates and notifications, right on your phone</p>
-          </div>
         </div>
       </div>
     </section>
