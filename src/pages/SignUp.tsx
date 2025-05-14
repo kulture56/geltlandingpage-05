@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -51,8 +50,9 @@ const formSchema = z
     investmentInterests: z
       .array(z.string())
       .min(1, { message: "Please select at least one investment interest" }),
-    acceptTerms: z.literal(true, {
-      errorMap: () => ({ message: "You must accept the terms to continue" }),
+    // Changed from literal true to boolean().refine to avoid the type issue
+    acceptTerms: z.boolean().refine(val => val === true, {
+      message: "You must accept the terms to continue",
     }),
   })
   .refine((data) => data.password === data.confirmPassword, {
@@ -79,7 +79,7 @@ export default function SignUp() {
       password: "",
       confirmPassword: "",
       investmentInterests: [],
-      acceptTerms: false,
+      acceptTerms: false, // This was the source of the type error
     },
   });
 
@@ -138,6 +138,7 @@ export default function SignUp() {
           <CardContent>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                
                 <FormField
                   control={form.control}
                   name="fullName"
