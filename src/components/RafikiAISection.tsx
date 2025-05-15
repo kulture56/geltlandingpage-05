@@ -31,7 +31,7 @@ const RafikiAISection = () => {
                   <p>Sawa! That's a great first step. Based on Kenyan markets, I recommend:</p>
                   <ol className="list-decimal ml-5 mt-2">
                     <li>Start with NSE education resources on GELT</li>
-                    <li>Consider joining our weekly "Stock Basics" webinar</li>
+                    <li>Consider participating in our daily  streaks, compete with other community members.</li>
                     <li>Begin with blue-chip companies like Safaricom or KCB</li>
                   </ol>
                   <p className="mt-2">Would you like me to connect you with a stock investment mentor from our community?</p>
@@ -84,7 +84,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Provides real-time market updates, analysis and visualizations directly from verifiplatforms</span>
+                <span className="text-gray-700">Provides real-time market updates, analysis and visualizations directly from verified platforms</span>
               </li>
             </ul>
             <Button className="bg-geltPurple hover:bg-geltPurple-600">Chat with Rafiki Now</Button>
