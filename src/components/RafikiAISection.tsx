@@ -49,8 +49,8 @@ const RafikiAISection = () => {
           </div>
           
           <div className="w-full md:w-1/2 order-1 md:order-2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Rafiki AI Assistant</h2>
-            <p className="text-lg text-gray-600 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-purple-900">Meet Rafiki AI Assistant</h2>
+            <p className="text-lg mb-6 text-zinc-950">
               Your personalized financial companion that speaks both English and Swahili.
             </p>
             <ul className="space-y-4 mb-8">
@@ -60,7 +60,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">24/7 financial guidance tailored to Kenyan markets</span>
+                <span className="text-zinc-950">24/7 financial guidance tailored to Kenyan markets</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -68,7 +68,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Explains complex investment concepts in simple terms</span>
+                <span className="text-zinc-950">Explains complex investment concepts in simple terms</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -76,7 +76,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Connects you with relevant GELT community members</span>
+                <span className="text-zinc-950">Connects you with relevant GELT community members</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -84,7 +84,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Provides real-time market updates and analysis</span>
+                <span className="text-zinc-950">Provides real-time market updates and analysis</span>
               </li>
             </ul>
             <Button className="bg-geltPurple hover:bg-geltPurple-600">Chat with Rafiki Now</Button>

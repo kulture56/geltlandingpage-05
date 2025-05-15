@@ -24,8 +24,8 @@ const FeaturesSection = () => {
   return <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-white to-geltPurple-light/20">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Benefits of GELT</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-violet-900">Benefits of GELT</h2>
+          <p className="text-lg max-w-2xl mx-auto text-zinc-950">
             Our platform combines social connection with financial empowerment to create a uniquely Kenyan investment experience.
           </p>
         </div>
