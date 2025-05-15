@@ -21,8 +21,8 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-in">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-              <span className="text-black">Learn. Empower. </span>
-              <span className="text-geltPurple">Invest.</span>
+              <span className="text-black">GROW.  Empower. </span>
+              <span className="text-geltPurple">LEARN. THRIVE.</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-700 max-w-lg">
               <span className="font-medium text-black">Karibu!</span> Join Kenya's premier social-fintech platform connecting investors with knowledge, community, and opportunities.
