@@ -76,7 +76,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Connects you with relevant GELT community members</span>
+                <span className="text-gray-700">Connects you with relevant GELT community members & posts</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
