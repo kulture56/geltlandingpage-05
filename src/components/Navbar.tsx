@@ -1,13 +1,9 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
+  return <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center">
           <span className="text-2xl font-bold text-geltPurple">GELT</span>
@@ -31,18 +27,13 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden p-2" 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
+        <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle menu">
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="fixed inset-0 top-16 bg-white z-40 md:hidden">
+      {isMenuOpen && <div className="fixed inset-0 top-16 bg-white z-40 md:hidden">
           <div className="container mx-auto px-4 py-8 flex flex-col gap-6">
             <a href="#features" className="text-lg font-medium hover:text-geltPurple transition-colors py-2 border-b" onClick={() => setIsMenuOpen(false)}>
               Features
@@ -65,10 +56,7 @@ const Navbar = () => {
               </Button>
             </div>
           </div>
-        </div>
-      )}
-    </nav>
-  );
+        </div>}
+    </nav>;
 };
-
 export default Navbar;
