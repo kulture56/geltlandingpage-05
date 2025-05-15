@@ -7,20 +7,19 @@ import { useToast } from "@/hooks/use-toast";
 
 const HeroSection = () => {
   const [showNotification, setShowNotification] = useState(true);
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   
   const dismissNotification = () => {
     setShowNotification(false);
     toast({
       title: "Notification dismissed",
       description: "You can always check your notifications in the app",
-      duration: 3000
+      duration: 3000,
     });
   };
   
-  return <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+  return (
+    <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 mb-12 md:mb-0 animate-fade-in">
@@ -32,27 +31,12 @@ const HeroSection = () => {
               <span className="font-medium text-black">Karibu!</span> Join Kenya's premier social-fintech platform connecting investors with knowledge, community, and opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex flex-wrap gap-4">
-                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
-                  <img src="/lovable-uploads/59481424-1af4-4c93-8a68-e9a53d7ce0be.png" alt="Usalama" className="w-8 h-8" />
-                  <span className="text-sm font-medium">Usalama</span>
-                </div>
-                
-                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
-                  <img src="/lovable-uploads/d66b7002-5d86-495f-9cee-bcbf9710c007.png" alt="Uwekezaji" className="w-8 h-8" />
-                  <span className="text-sm font-medium">Uwekezaji</span>
-                </div>
-                
-                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
-                  <img src="/lovable-uploads/7e1f2ed7-a683-4653-aded-4c51fb4842d8.png" alt="Jumuiya" className="w-8 h-8" />
-                  <span className="text-sm font-medium">Jumuiya</span>
-                </div>
-                
-                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
-                  <img src="/lovable-uploads/bb72c48e-0ebf-46e1-8195-c74346dfe13f.png" alt="Elimu ya Kifedha" className="w-8 h-8" />
-                  <span className="text-sm font-medium">Elimu ya Kifedha</span>
-                </div>
-              </div>
+              <Button size="lg" className="bg-geltPurple hover:bg-geltPurple-600 text-white font-medium px-8">
+                Get Started
+              </Button>
+              <Button size="lg" variant="outline" className="border-geltPurple text-geltPurple hover:text-white hover:bg-geltPurple font-medium">
+                Sign Up Free
+              </Button>
             </div>
             <div className="mt-8 flex items-center text-sm text-gray-500">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium mr-2">New</span>
@@ -64,10 +48,15 @@ const HeroSection = () => {
               {/* iPhone with notification overlay */}
               <div className="relative mx-auto w-full max-w-[320px]">
                 {/* iPhone image */}
-                <img src="/lovable-uploads/0199a015-c35b-4921-affa-55488db74432.png" alt="iPhone lock screen" className="w-full h-auto rounded-3xl shadow-lg" />
+                <img 
+                  src="/lovable-uploads/0199a015-c35b-4921-affa-55488db74432.png" 
+                  alt="iPhone lock screen" 
+                  className="w-full h-auto rounded-3xl shadow-lg"
+                />
                 
                 {/* iOS Notification - Repositioned with better design */}
-                {showNotification && <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 w-[90%] bg-white/90 backdrop-blur-sm rounded-xl shadow-md p-3 animate-fade-in">
+                {showNotification && (
+                  <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 w-[90%] bg-white/90 backdrop-blur-sm rounded-xl shadow-md p-3 animate-fade-in">
                     <div className="flex items-start gap-3 relative">
                       <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold shrink-0">
                         G
@@ -79,11 +68,16 @@ const HeroSection = () => {
                           Just invested in <span className="text-geltPurple font-medium">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
                         </p>
                       </div>
-                      <button onClick={dismissNotification} className="absolute top-0 right-0 p-1 rounded-full hover:bg-gray-200 transition-colors" aria-label="Dismiss notification">
+                      <button 
+                        onClick={dismissNotification}
+                        className="absolute top-0 right-0 p-1 rounded-full hover:bg-gray-200 transition-colors"
+                        aria-label="Dismiss notification"
+                      >
                         <X className="h-4 w-4 text-gray-500" />
                       </button>
                     </div>
-                  </div>}
+                  </div>
+                )}
               </div>
               
               {/* Conversation bubbles below the phone - keep a few for social proof */}
@@ -120,7 +114,8 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default HeroSection;
