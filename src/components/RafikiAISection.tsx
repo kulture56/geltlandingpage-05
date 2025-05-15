@@ -60,7 +60,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">24/7 financial guidance tailored to Kenyan markets</span>
+                <span className="text-gray-700">24/7 financial guidance tailored to your specific requests. </span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -68,7 +68,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Explains complex investment concepts in simple terms</span>
+                <span className="text-gray-700">Explains complex investment concepts in simple terms understandable to beginners and elderly.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -76,7 +76,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Connects you with relevant GELT community members & posts</span>
+                <span className="text-gray-700">Connects you with relevant GELT community members, institutions & posts.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -84,7 +84,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-gray-700">Provides real-time market updates and analysis</span>
+                <span className="text-gray-700">Provides real-time market updates, analysis and visualizations directly from verifiplatforms</span>
               </li>
             </ul>
             <Button className="bg-geltPurple hover:bg-geltPurple-600">Chat with Rafiki Now</Button>
