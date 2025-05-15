@@ -1,15 +1,13 @@
-
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const RafikiAISection = () => {
-  return (
-    <section id="rafiki" className="py-16 md:py-24">
+  return <section id="rafiki" className="py-16 md:py-24">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <div className="bg-white rounded-2xl shadow-xl p-4 border border-gray-100 max-w-md mx-auto">
-              <div className="text-center mb-4 text-sm text-gray-500">Today</div>
+              <div className="text-center mb-4 text-sm text-gray-500">®️Rafiki AI Assistant
+Today</div>
               
               {/* AI Message */}
               <div className="flex items-start gap-3 mb-6">
@@ -94,8 +92,6 @@ const RafikiAISection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RafikiAISection;
