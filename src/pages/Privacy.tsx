@@ -64,7 +64,7 @@ const Privacy = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-zinc-950">
               By using GELT, you consent to the collection and use of information as described in this Privacy Policy.
             </p>
           </div>
