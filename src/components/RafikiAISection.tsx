@@ -6,11 +6,11 @@ const RafikiAISection = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
             <div className="bg-white rounded-2xl shadow-xl p-4 border border-gray-100 max-w-md mx-auto">
-              <div className="text-center mb-4 text-sm text-gray-500">Today</div>
+              <div className="text-center mb-4 text-sm text-gray-500 bg-slate-50">Today</div>
               
               {/* AI Message */}
               <div className="flex items-start gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold">AI</div>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-slate-300">®️</div>
                 <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
                   <p>Habari! I'm Rafiki, your financial assistant. How can I help you today?</p>
                 </div>
@@ -26,7 +26,7 @@ const RafikiAISection = () => {
               
               {/* AI Message */}
               <div className="flex items-start gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold">AI</div>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-slate-300">®️</div>
                 <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
                   <p>Sawa! That's a great first step. Based on Kenyan markets, I recommend:</p>
                   <ol className="list-decimal ml-5 mt-2">
