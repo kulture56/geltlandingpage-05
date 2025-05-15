@@ -1,10 +1,7 @@
-
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const RafikiAISection = () => {
-  return (
-    <section id="rafiki" className="py-16 md:py-24">
+  return <section id="rafiki" className="py-16 md:py-24">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
@@ -94,8 +91,6 @@ const RafikiAISection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RafikiAISection;
