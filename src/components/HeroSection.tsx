@@ -1,13 +1,16 @@
+
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { X } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+
 const HeroSection = () => {
   const [showNotification, setShowNotification] = useState(true);
   const {
     toast
   } = useToast();
+  
   const dismissNotification = () => {
     setShowNotification(false);
     toast({
@@ -16,6 +19,7 @@ const HeroSection = () => {
       duration: 3000
     });
   };
+  
   return <section className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center">
@@ -28,8 +32,27 @@ const HeroSection = () => {
               <span className="font-medium text-black">Karibu!</span> Join Kenya's premier social-fintech platform connecting investors with knowledge, community, and opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              
-              
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
+                  <img src="/lovable-uploads/59481424-1af4-4c93-8a68-e9a53d7ce0be.png" alt="Usalama" className="w-8 h-8" />
+                  <span className="text-sm font-medium">Usalama</span>
+                </div>
+                
+                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
+                  <img src="/lovable-uploads/d66b7002-5d86-495f-9cee-bcbf9710c007.png" alt="Uwekezaji" className="w-8 h-8" />
+                  <span className="text-sm font-medium">Uwekezaji</span>
+                </div>
+                
+                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
+                  <img src="/lovable-uploads/7e1f2ed7-a683-4653-aded-4c51fb4842d8.png" alt="Jumuiya" className="w-8 h-8" />
+                  <span className="text-sm font-medium">Jumuiya</span>
+                </div>
+                
+                <div className="flex items-center gap-2 bg-white rounded-lg shadow-sm p-2 border border-gray-100">
+                  <img src="/lovable-uploads/bb72c48e-0ebf-46e1-8195-c74346dfe13f.png" alt="Elimu ya Kifedha" className="w-8 h-8" />
+                  <span className="text-sm font-medium">Elimu ya Kifedha</span>
+                </div>
+              </div>
             </div>
             <div className="mt-8 flex items-center text-sm text-gray-500">
               <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium mr-2">New</span>
@@ -99,4 +122,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
