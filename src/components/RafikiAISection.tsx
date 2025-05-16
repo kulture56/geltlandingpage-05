@@ -5,47 +5,7 @@ const RafikiAISection = () => {
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
-            <div className="bg-white rounded-2xl shadow-xl p-4 border border-gray-100 max-w-md mx-auto">
-              <div className="text-center mb-4 text-sm text-gray-500 bg-slate-50">Today</div>
-              
-              {/* AI Message */}
-              <div className="flex items-start gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-slate-300">®️</div>
-                <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
-                  <p>Jambo! I'm Rafiki, your AI assistant. How can I help you today?</p>
-                </div>
-              </div>
-              
-              {/* User Message */}
-              <div className="flex items-start gap-3 justify-end mb-6">
-                <div className="bg-geltPurple/10 rounded-2xl p-3 max-w-[80%]">
-                  <p>I want to start investing in stocks but don't know where to begin.</p>
-                </div>
-                <div className="w-10 h-10 rounded-full bg-geltPurple-light flex items-center justify-center text-geltPurple font-bold">ME</div>
-              </div>
-              
-              {/* AI Message */}
-              <div className="flex items-start gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-slate-300">®️</div>
-                <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
-                  <p>Sawa! That's a great first step. Based on Kenyan markets, I recommend:</p>
-                  <ol className="list-decimal ml-5 mt-2">
-                    <li>Start with NSE Training resources in their site under Public Education.</li>
-                    <li>Consider competing with other community members in daily streaks.</li>
-                    <li>Begin with blue-chip companies like Safaricom or KCB.</li>
-                  </ol>
-                  <p className="mt-2">Would you like me to connect you with a verified investment mentor from our community?</p>
-                </div>
-              </div>
-              
-              {/* Chat Input */}
-              <div className="flex gap-2 mt-6">
-                <div className="flex-1 border rounded-full px-4 py-2 text-gray-400">Type your question...</div>
-                <Button size="icon" className="rounded-full bg-geltPurple hover:bg-geltPurple-600">
-                  <MessageCircle className="h-5 w-5" />
-                </Button>
-              </div>
-            </div>
+            
           </div>
           
           <div className="w-full md:w-1/2 order-1 md:order-2">
