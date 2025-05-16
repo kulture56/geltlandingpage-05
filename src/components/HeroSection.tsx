@@ -56,26 +56,10 @@ const HeroSection = () => {
               {/* iPhone with notification overlay */}
               <div className="relative mx-auto w-full max-w-[320px]">
                 {/* iPhone image */}
-                <img src="/lovable-uploads/0199a015-c35b-4921-affa-55488db74432.png" alt="iPhone lock screen" className="w-full h-auto rounded-3xl shadow-lg" />
+                
                 
                 {/* iOS Notification - Repositioned with better design */}
-                {showNotification && <div className="absolute top-[60px] left-1/2 transform -translate-x-1/2 w-[90%] bg-white/90 backdrop-blur-sm rounded-xl shadow-md p-3 animate-fade-in">
-                    <div className="flex items-start gap-3 relative">
-                      <div className="w-10 h-10 rounded-full bg-geltPurple flex items-center justify-center text-white font-bold shrink-0">
-                        G
-                      </div>
-                      <div className="flex-1">
-                        <div className="font-semibold text-sm">John Makau</div>
-                        <div className="text-gray-500 text-xs">2 minutes ago</div>
-                        <p className="text-sm mt-1 text-left">
-                          Just invested in <span className="text-geltPurple font-medium">#SACCO</span> shares after our community discussion. Learned so much, asante! 🚀
-                        </p>
-                      </div>
-                      <button onClick={dismissNotification} className="absolute top-0 right-0 p-1 rounded-full hover:bg-gray-200 transition-colors" aria-label="Dismiss notification">
-                        
-                      </button>
-                    </div>
-                  </div>}
+                {showNotification}
               </div>
               
               {/* Conversation bubbles below the phone - keep a few for social proof */}
