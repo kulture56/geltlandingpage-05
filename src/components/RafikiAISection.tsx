@@ -215,15 +215,17 @@ const AIMessageBar = ({ onClose }: { onClose: () => void }) => {
         </div>
       </form>
 
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(8px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
-        .delay-75 { animation-delay: 0.2s; }
-        .delay-150 { animation-delay: 0.4s; }
-      `}</style>
+      <style>
+        {`
+          @keyframes fade-in {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fade-in { animation: fade-in 0.3s ease-out forwards; }
+          .delay-75 { animation-delay: 0.2s; }
+          .delay-150 { animation-delay: 0.4s; }
+        `}
+      </style>
     </Card>
   );
 };
