@@ -63,35 +63,9 @@ const HeroSection = () => {
               </div>
               
               {/* Conversation bubbles below the phone - keep a few for social proof */}
-              <div className="hidden md:block bg-white shadow-xl rounded-2xl p-4 border border-gray-100 mb-4 ml-8 transform hover:-translate-y-1 transition-transform duration-300 mt-6">
-                <div className="flex items-start gap-3">
-                  <Avatar className="w-10 h-10 bg-geltPurple-light text-geltPurple">
-                    <AvatarFallback>WN</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-medium">Wanjiku Njeri</div>
-                    <div className="text-gray-500 text-sm">5 minutes ago</div>
-                    <p className="mt-2">
-                      Rafiki AI just helped me understand <span className="hashtag">#CRYPTO</span> basics. So easy to follow! Who else is learning?
-                    </p>
-                  </div>
-                </div>
-              </div>
               
-              <div className="hidden md:block bg-white shadow-xl rounded-2xl p-4 border border-gray-100 ml-4 transform hover:-translate-y-1 transition-transform duration-300">
-                <div className="flex items-start gap-3">
-                  <Avatar className="w-10 h-10 bg-geltPurple-light text-geltPurple">
-                    <AvatarFallback>DO</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-medium">David Omondi</div>
-                    <div className="text-gray-500 text-sm">10 minutes ago</div>
-                    <p className="mt-2">
-                      My <span className="hashtag">#STOCKS</span> portfolio is up 15% since joining GELT's expert webinars. Tuko pamoja! 💪🏾
-                    </p>
-                  </div>
-                </div>
-              </div>
+              
+              
             </AnimatedContainer>
           </div>
         </div>
