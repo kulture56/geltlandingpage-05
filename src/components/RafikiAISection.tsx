@@ -30,12 +30,11 @@ const RafikiAISection = () => {
                 <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
                   <p>Sawa! That's a great first step. Based on Kenyan markets, I recommend:</p>
                   <ol className="list-decimal ml-5 mt-2">
-                    <li>Start with NSE Training resources 
-https://www.nse.co.ke/training/ </li>
-                    <li>Consider joining our weekly "Stock Basics" webinar</li>
+                    <li>Start with NSE Training resources in their site under Public Education.</li>
+                    <li>Consider compete with other community members in daily streaks</li>
                     <li>Begin with blue-chip companies like Safaricom or KCB</li>
                   </ol>
-                  <p className="mt-2">Would you like me to connect you with a stock investment mentor from our community?</p>
+                  <p className="mt-2">Would you like me to connect you with a verified investment mentor from our community?</p>
                 </div>
               </div>
               
