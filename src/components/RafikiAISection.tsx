@@ -12,7 +12,7 @@ const RafikiAISection = () => {
               <div className="flex items-start gap-3 mb-6">
                 <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold bg-slate-300">®️</div>
                 <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
-                  <p>Habari! I'm Rafiki, your financial assistant. How can I help you today?</p>
+                  <p>Jambo! I'm Rafiki, your AI assistant. How can I help you today?</p>
                 </div>
               </div>
               
@@ -30,7 +30,8 @@ const RafikiAISection = () => {
                 <div className="bg-gray-100 rounded-2xl p-3 max-w-[80%]">
                   <p>Sawa! That's a great first step. Based on Kenyan markets, I recommend:</p>
                   <ol className="list-decimal ml-5 mt-2">
-                    <li>Start with NSE education resources on GELT</li>
+                    <li>Start with NSE Training resources 
+https://www.nse.co.ke/training/ </li>
                     <li>Consider joining our weekly "Stock Basics" webinar</li>
                     <li>Begin with blue-chip companies like Safaricom or KCB</li>
                   </ol>
