@@ -56,7 +56,7 @@ const HeroSection = () => {
               {/* iPhone with notification overlay */}
               <div className="relative mx-auto w-full max-w-[320px]">
                 {/* iPhone image */}
-                <img src="/lovable-uploads/ca24dfd5-0135-4e64-8fc9-70bfdf8f9867.png" alt="Mobile app screenshot" className="w-full h-auto rounded-3xl shadow-2xl" />
+                
                 
                 {/* iOS Notification */}
                 {showNotification}
