@@ -234,9 +234,10 @@ export const AnimatedContainer = React.forwardRef<HTMLDivElement, AnimatedContai
         whileInView="visible"
         viewport={{ once: true, ...props.viewport }}
         transition={{
-          ease: transition?.ease ?? "easeInOut",
-          duration: transition?.duration ?? 0.5,
-          delay: transition?.delay ?? 0.4,
+          type: "tween",
+          ease: typeof transition?.ease !== 'undefined' ? transition.ease : "easeInOut",
+          duration: typeof transition?.duration !== 'undefined' ? transition.duration : 0.5,
+          delay: typeof transition?.delay !== 'undefined' ? transition.delay : 0.4,
           ...transition,
         }}
         {...props}
