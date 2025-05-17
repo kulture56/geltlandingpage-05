@@ -1,15 +1,18 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Hero, BgGradient, TextStagger, AnimatedContainer, GRADIENT_COLORS } from "@/components/ui/hero";
+
 const HeroSection = () => {
   const [showNotification, setShowNotification] = useState(true);
   const [currentColorTheme, setCurrentColorTheme] = useState<keyof typeof GRADIENT_COLORS>("purple");
   const {
     toast
   } = useToast();
+  
   const dismissNotification = () => {
     setShowNotification(false);
     toast({
@@ -32,7 +35,9 @@ const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, []);
-  return <Hero className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28">
+  
+  return (
+    <Hero className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28">
       {/* Background gradient that changes color */}
       <BgGradient gradientColors={currentColorTheme} gradientPosition="top" gradientSize="lg" className="transition-opacity duration-1000 ease-in-out" />
       
@@ -59,12 +64,32 @@ const HeroSection = () => {
                 
                 
                 {/* iOS Notification */}
-                {showNotification}
+                {showNotification && (
+                  <div className="absolute top-10 right-0 left-0 mx-auto w-[280px] bg-white/90 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-gray-200">
+                    <div className="flex items-start">
+                      <Avatar className="h-10 w-10 mr-3">
+                        <AvatarFallback className="bg-geltPurple text-white">G</AvatarFallback>
+                      </Avatar>
+                      <div className="flex-1">
+                        <h4 className="font-medium text-sm">Gelt Notification</h4>
+                        <p className="text-xs text-gray-600 mt-1">New investment opportunity available!</p>
+                      </div>
+                      <button onClick={dismissNotification} className="text-gray-400 hover:text-gray-600">
+                        <X size={16} />
+                      </button>
+                    </div>
+                    <div className="mt-3">
+                      <Button size="sm" className="w-full text-xs" variant="outline">View Details</Button>
+                    </div>
+                  </div>
+                )}
               </div>
             </AnimatedContainer>
           </div>
         </div>
       </div>
-    </Hero>;
+    </Hero>
+  );
 };
+
 export default HeroSection;
