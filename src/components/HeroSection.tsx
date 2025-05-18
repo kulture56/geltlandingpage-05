@@ -1,15 +1,18 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { Hero, BgGradient, TextStagger, AnimatedContainer, GRADIENT_COLORS } from "@/components/ui/hero";
+
 const HeroSection = () => {
   const [showNotification, setShowNotification] = useState(true);
   const [currentColorTheme, setCurrentColorTheme] = useState<keyof typeof GRADIENT_COLORS>("purple");
   const {
     toast
   } = useToast();
+  
   const dismissNotification = () => {
     setShowNotification(false);
     toast({
@@ -32,7 +35,9 @@ const HeroSection = () => {
 
     return () => clearInterval(interval);
   }, []);
-  return <Hero className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28">
+  
+  return (
+    <Hero className="pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-40 lg:pb-28">
       {/* Background gradient that changes color */}
       <BgGradient gradientColors={currentColorTheme} gradientPosition="top" gradientSize="lg" className="transition-opacity duration-1000 ease-in-out" />
       
@@ -59,12 +64,34 @@ const HeroSection = () => {
                 
                 
                 {/* iOS Notification */}
-                {showNotification}
+                {showNotification && (
+                  <div className="absolute top-0 right-0 w-full max-w-[300px] bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-lg border border-gray-200">
+                    <div className="flex items-start">
+                      <Avatar className="h-10 w-10 mr-3">
+                        <AvatarFallback className="bg-primary text-white">G</AvatarFallback>
+                      </Avatar>
+                      <div className="flex-1">
+                        <div className="flex justify-between items-start">
+                          <div>
+                            <h4 className="font-semibold text-sm mb-1">Gelt</h4>
+                            <p className="text-xs text-gray-500">Just now</p>
+                          </div>
+                          <Button variant="ghost" size="icon" className="h-7 w-7" onClick={dismissNotification}>
+                            <X className="h-4 w-4" />
+                          </Button>
+                        </div>
+                        <p className="text-sm mt-2">Welcome to Gelt! Your journey to financial growth begins now.</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </AnimatedContainer>
           </div>
         </div>
       </div>
-    </Hero>;
+    </Hero>
+  );
 };
+
 export default HeroSection;
