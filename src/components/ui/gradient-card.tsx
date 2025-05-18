@@ -276,7 +276,7 @@ export const GradientCard = () => {
               duration: 1.2,
               delay: 0.4
             }
-          }} className="text-sm mb-6 text-slate-50 font-extrabold">
+          }} className="text-sm mb-6 text-white">
               Jambo! I am Rafiki, your customized AI Assistant that speaks both English and Swahili.
               <br /><br />
               Personalized to do the following:

@@ -24,6 +24,9 @@ const GradientCardSection = () => {
 
   return (
     <section className="py-20 relative">
+      {/* Visual break between hero and gradient card section */}
+      <div className="border-t border-white/20 w-full absolute top-0 left-0"></div>
+      
       {/* Background gradient that changes color */}
       <BgGradient 
         gradientColors={currentColorTheme}
