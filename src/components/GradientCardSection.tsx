@@ -25,7 +25,7 @@ const GradientCardSection = () => {
       {/* Background gradient that changes color */}
       <BgGradient gradientColors={currentColorTheme} gradientPosition="center" gradientSize="lg" className="transition-opacity duration-1000 ease-in-out" />
       
-      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 bg-purple-900">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-16 bg-slate-50">
         <div className="w-full md:w-1/2 flex justify-center items-center z-10">
           <AnimatedContainer>
             <TextStagger as="h2" text="Interactive AI" className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-0 text-black" stagger={0.05} />
