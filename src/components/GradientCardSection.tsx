@@ -30,7 +30,7 @@ const GradientCardSection = () => {
           <AnimatedContainer>
             <TextStagger as="h2" text="Interactive AI" className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-0 text-black" stagger={0.05} />
             <TextStagger as="h2" text="Financial Assistant" className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-geltPurple" stagger={0.05} direction="right" />
-            <TextStagger as="p" text="Meet Rafiki, your AI guide to Kenya's financial landscape. Available 24/7 to help you navigate investments, savings, and financial growth." stagger={0.02} direction="bottom" className="text-lg md:text-xl mb-6 mx-auto text-zinc-950" />
+            <TextStagger as="p" text="Meet Rafiki, your AI guide to Kenya's financial landscape. Available 24/7 to help you navigate investments, savings, and financial growth." stagger={0.02} direction="bottom" className="text-lg md:text-xl mb-6 mx-auto text-slate-50" />
           </AnimatedContainer>
         </div>
         
