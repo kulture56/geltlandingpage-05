@@ -1,7 +1,9 @@
+
 'use client';
 
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
+
 export const GradientCard = () => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -223,11 +225,13 @@ export const GradientCard = () => {
             backdropFilter: "blur(3px)"
           }} />
 
-            {/* Star icon matching the image */}
+            {/* Use uploaded headset image instead of star icon */}
             <div className="flex items-center justify-center w-full h-full relative z-10">
-              <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 0L9.4 5.4L14.8 5.4L10.6 8.8L12 14.2L8 10.8L4 14.2L5.4 8.8L1.2 5.4L6.6 5.4L8 0Z" fill="white" />
-              </svg>
+              <img 
+                src="/lovable-uploads/879808f9-3af7-4d4d-a602-ff3a5a27a925.png" 
+                alt="Support headset" 
+                className="w-8 h-8 object-contain"
+              />
             </div>
           </motion.div>
 
@@ -273,11 +277,14 @@ export const GradientCard = () => {
               delay: 0.4
             }
           }} className="text-sm mb-6 text-slate-50 font-extrabold">
-              Jambo! I am Rafiki, your customized AI Assistant that speaks both English 
-              and Swahili. 
+              Jambo! I am Rafiki, your customized AI Assistant that speaks both English and Swahili.
+              <br /><br />
               Personalized to do the following:
+              <br />
               • Provide answers, insights & recommendations to requests.
+              <br />
               • 24/7 financial guidance tailored to Kenyan markets.
+              <br />
               • Explains complex investment concepts in simple terms.
             </motion.p>
 
