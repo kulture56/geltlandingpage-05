@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -15,8 +16,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           <div className="flex gap-6">
             <a href="#features" className="text-sm font-medium hover:text-geltPurple transition-colors">Features</a>
-            <a href="#rafiki" className="text-sm font-medium hover:text-geltPurple transition-colors">Rafiki AI</a>
-            <a href="#community" className="text-sm font-medium hover:text-geltPurple transition-colors">Community</a>
+            <a href="#rafiki" className="text-sm font-medium hover:text-geltPurple transition-colors">®Rafiki AI</a>
+            <a href="#community" className="text-sm font-medium hover:text-geltPurple transition-colors">Jamii</a>
             <a href="#testimonials" className="text-sm font-medium hover:text-geltPurple transition-colors">Testimonials</a>
           </div>
           <Button variant="outline" className="border-geltPurple text-geltPurple hover:text-white hover:bg-geltPurple">
@@ -40,10 +41,10 @@ const Navbar = () => {
               Features
             </a>
             <a href="#rafiki" className="text-lg font-medium hover:text-geltPurple transition-colors py-2 border-b" onClick={() => setIsMenuOpen(false)}>
-              Rafiki AI
+              ®Rafiki AI
             </a>
             <a href="#community" className="text-lg font-medium hover:text-geltPurple transition-colors py-2 border-b" onClick={() => setIsMenuOpen(false)}>
-              Community
+              Jamii
             </a>
             <a href="#testimonials" className="text-lg font-medium hover:text-geltPurple transition-colors py-2 border-b" onClick={() => setIsMenuOpen(false)}>
               Testimonials
