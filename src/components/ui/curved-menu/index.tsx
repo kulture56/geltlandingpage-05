@@ -20,7 +20,7 @@ const Header: React.FC<HeaderProps> = ({
   };
   return <>
       <div className="relative">
-        <div onClick={handleClick} className="fixed -right-1 top-0 md:-right-1 m-5 z-50 w-12 h-12 rounded-none flex items-center justify-center cursor-pointer mx-[25px] px-0 py-0 my-px bg-purple-200">
+        <div onClick={handleClick} className="fixed -right-1 top-0 md:-right-1 m-5 z-50 w-12 h-12 rounded-none flex items-center justify-center cursor-pointer mx-[25px] px-0 py-0 my-px bg-white">
           <div className="relative w-8 h-6 flex flex-col justify-between items-center bg-gray-50">
             <span className={`block h-1 w-7 bg-black transition-transform duration-300 ${isActive ? "rotate-45 translate-y-2" : ""}`}></span>
             <span className={`block h-1 w-7 bg-black transition-opacity duration-300 ${isActive ? "opacity-0" : ""}`}></span>
