@@ -7,6 +7,7 @@ import RafikiAISection from "@/components/RafikiAISection";
 import CommunitySection from "@/components/CommunitySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CallToAction from "@/components/CallToAction";
+import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
       <CommunitySection />
       <TestimonialsSection />
       <CallToAction />
+      <NewsletterSection />
       <Footer />
     </div>
   );
