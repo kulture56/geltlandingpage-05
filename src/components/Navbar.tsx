@@ -1,7 +1,6 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 import CurvedMenu from "@/components/ui/curved-menu";
 
 const Navbar = () => {
@@ -30,7 +29,7 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile Menu - Now using Curved Menu for mobile */}
+        {/* Mobile Menu - Using Curved Menu for mobile */}
         <div className="md:hidden">
           <CurvedMenu />
         </div>
