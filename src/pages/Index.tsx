@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GradientCardSection from "@/components/GradientCardSection";
+import PlatformFeaturesSection from "@/components/PlatformFeaturesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import RafikiAISection from "@/components/RafikiAISection";
 import CommunitySection from "@/components/CommunitySection";
@@ -16,6 +17,7 @@ const Index = () => {
       <Navbar />
       <HeroSection />
       <GradientCardSection />
+      <PlatformFeaturesSection />
       <FeaturesSection />
       <RafikiAISection />
       <CommunitySection />
