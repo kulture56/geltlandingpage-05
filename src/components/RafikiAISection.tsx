@@ -1,94 +1,57 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Bot } from "lucide-react";
-import {
-  ExpandableChat,
-  ExpandableChatHeader,
-  ExpandableChatBody,
-  ExpandableChatFooter,
-} from "@/components/ui/expandable-chat";
+import { ExpandableChat, ExpandableChatHeader, ExpandableChatBody, ExpandableChatFooter } from "@/components/ui/expandable-chat";
 import { ChatMessageList } from "@/components/ui/chat-message-list";
-import {
-  ChatBubble,
-  ChatBubbleAvatar,
-  ChatBubbleMessage,
-} from "@/components/ui/chat-bubble";
+import { ChatBubble, ChatBubbleAvatar, ChatBubbleMessage } from "@/components/ui/chat-bubble";
 
 // Sample conversation data
-const sampleConversation = [
-  {
-    id: 1,
-    content: "Jambo! I'm Rafiki, your AI Assistant. How can I help you today?",
-    sender: "ai",
-  },
-  {
-    id: 2,
-    content: "Hello, can you tell me about GELT?",
-    sender: "user",
-  },
-  {
-    id: 3,
-    content: "GELT is an investment platform designed for the Kenyan market. It helps you learn about investing and provides access to financial opportunities tailored to local needs.",
-    sender: "ai",
-  },
-  {
-    id: 4,
-    content: "What types of investments can I make?",
-    sender: "user",
-  },
-  {
-    id: 5,
-    content: "With GELT, you can access various investment options including stocks, mutual funds, government bonds, and more. The platform is designed to help Kenyans build wealth through diversified investment strategies.",
-    sender: "ai",
-  },
-  {
-    id: 6,
-    content: "Thank you for the information!",
-    sender: "user",
-  },
-  {
-    id: 7,
-    content: "Karibu! Is there anything else you'd like to know about investing in Kenya?",
-    sender: "ai",
-  }
-];
-
+const sampleConversation = [{
+  id: 1,
+  content: "Jambo! I'm Rafiki, your AI Assistant. How can I help you today?",
+  sender: "ai"
+}, {
+  id: 2,
+  content: "Hello, can you tell me about GELT?",
+  sender: "user"
+}, {
+  id: 3,
+  content: "GELT is an investment platform designed for the Kenyan market. It helps you learn about investing and provides access to financial opportunities tailored to local needs.",
+  sender: "ai"
+}, {
+  id: 4,
+  content: "What types of investments can I make?",
+  sender: "user"
+}, {
+  id: 5,
+  content: "With GELT, you can access various investment options including stocks, mutual funds, government bonds, and more. The platform is designed to help Kenyans build wealth through diversified investment strategies.",
+  sender: "ai"
+}, {
+  id: 6,
+  content: "Thank you for the information!",
+  sender: "user"
+}, {
+  id: 7,
+  content: "Karibu! Is there anything else you'd like to know about investing in Kenya?",
+  sender: "ai"
+}];
 const RafikiAISection = () => {
   const [showChat, setShowChat] = useState<boolean>(false);
-  
-  return (
-    <section id="rafiki" className="py-16 md:py-24">
+  return <section id="rafiki" className="py-16 md:py-24">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2 order-2 md:order-1">
-            {showChat ? (
-              <div className="flex justify-center md:justify-start">
-                <Button 
-                  onClick={() => setShowChat(false)}
-                  className="bg-geltPurple hover:bg-geltPurple-600"
-                >
+            {showChat ? <div className="flex justify-center md:justify-start">
+                <Button onClick={() => setShowChat(false)} className="bg-geltPurple hover:bg-geltPurple-600">
                   Hide Rafiki AI Chat
                 </Button>
-              </div>
-            ) : (
-              <div className="flex justify-center md:justify-start">
-                <Button 
-                  onClick={() => setShowChat(true)}
-                  className="bg-geltPurple hover:bg-geltPurple-600"
-                >
-                  Chat with Rafiki Now
-                </Button>
-              </div>
-            )}
+              </div> : <div className="flex justify-center md:justify-start">
+                
+              </div>}
             
             {/* Floating Expandable Chat */}
             <div className="relative h-32">
-              <ExpandableChat
-                size="lg"
-                position="bottom-right"
-                icon={<Bot className="h-6 w-6" />}
-              >
+              <ExpandableChat size="lg" position="bottom-right" icon={<Bot className="h-6 w-6" />}>
                 <ExpandableChatHeader className="flex items-center justify-between bg-geltPurple text-white">
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -101,28 +64,12 @@ const RafikiAISection = () => {
 
                 <ExpandableChatBody>
                   <ChatMessageList>
-                    {sampleConversation.map((message) => (
-                      <ChatBubble
-                        key={message.id}
-                        variant={message.sender === "user" ? "sent" : "received"}
-                      >
-                        <ChatBubbleAvatar
-                          className="h-8 w-8 shrink-0"
-                          src={
-                            message.sender === "user"
-                              ? undefined
-                              : "/lovable-uploads/6db6e250-3ae9-4f5b-b08b-fa270c31751d.png"
-                          }
-                          fallback={message.sender === "user" ? "ME" : "AI"}
-                        />
-                        <ChatBubbleMessage
-                          variant={message.sender === "user" ? "sent" : "received"}
-                          className={message.sender === "user" ? "bg-geltPurple text-white" : "bg-slate-200 text-slate-800"}
-                        >
+                    {sampleConversation.map(message => <ChatBubble key={message.id} variant={message.sender === "user" ? "sent" : "received"}>
+                        <ChatBubbleAvatar className="h-8 w-8 shrink-0" src={message.sender === "user" ? undefined : "/lovable-uploads/6db6e250-3ae9-4f5b-b08b-fa270c31751d.png"} fallback={message.sender === "user" ? "ME" : "AI"} />
+                        <ChatBubbleMessage variant={message.sender === "user" ? "sent" : "received"} className={message.sender === "user" ? "bg-geltPurple text-white" : "bg-slate-200 text-slate-800"}>
                           {message.content}
                         </ChatBubbleMessage>
-                      </ChatBubble>
-                    ))}
+                      </ChatBubble>)}
                   </ChatMessageList>
                 </ExpandableChatBody>
 
@@ -173,19 +120,12 @@ const RafikiAISection = () => {
                 <span className="text-zinc-950">Provides real-time market updates and analysis</span>
               </li>
             </ul>
-            {!showChat && (
-              <Button 
-                onClick={() => setShowChat(true)}
-                className="bg-geltPurple hover:bg-geltPurple-600 md:hidden"
-              >
+            {!showChat && <Button onClick={() => setShowChat(true)} className="bg-geltPurple hover:bg-geltPurple-600 md:hidden">
                 Chat with Rafiki Now
-              </Button>
-            )}
+              </Button>}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default RafikiAISection;
