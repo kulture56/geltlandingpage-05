@@ -40,13 +40,13 @@ const GlowingFeatureCard = ({
               </div>
             </div>
             <div className="space-y-3 text-center">
-              <h3 className="text-xl leading-[1.375rem] font-bold font-sans tracking-[-0.04em] md:text-xl md:leading-[1.875rem] text-balance text-gray-900">
+              <h3 className="text-xl leading-[1.375rem] font-bold font-sans tracking-[-0.04em] md:text-xl md:leading-[1.875rem] text-balance text-purple-700">
                 {feature.title}
               </h3>
-              <p className="text-sm text-geltPurple font-medium">
+              <p className="text-sm font-medium text-violet-700">
                 {feature.subtitle}
               </p>
-              <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-gray-600">
+              <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-gray-50">
                 {feature.description}
               </p>
             </div>
