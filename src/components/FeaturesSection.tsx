@@ -1,5 +1,6 @@
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { cn } from "@/lib/utils";
+
 const features = [{
   iconSrc: "/lovable-uploads/f9ff53da-960f-44e2-a008-c367965e0034.png",
   title: "Elimu ya Kifedha",
@@ -21,17 +22,29 @@ const features = [{
   subtitle: "Security",
   description: "Enjoy peace of mind with our secure platform designed to protect your information and investments."
 }];
+
 interface GlowingFeatureCardProps {
   feature: typeof features[0];
   index: number;
 }
+
 const GlowingFeatureCard = ({
   feature,
   index
 }: GlowingFeatureCardProps) => {
-  return <div className="min-h-[18rem] list-none">
+  return (
+    <div className="min-h-[18rem] list-none">
       <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-gray-200 p-2 md:rounded-[1.5rem] md:p-3 bg-slate-100">
-        <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={3} />
+        <GlowingEffect 
+          spread={40} 
+          glow={true} 
+          disabled={false} 
+          proximity={64} 
+          inactiveZone={0.01} 
+          borderWidth={3}
+          autoRotate={true}
+          rotationSpeed={4000}
+        />
         <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] p-6 shadow-sm bg-zinc-950">
           <div className="relative flex flex-1 flex-col justify-between gap-4">
             <div className="flex justify-center">
@@ -53,10 +66,13 @@ const GlowingFeatureCard = ({
           </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
+
 const FeaturesSection = () => {
-  return <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-white to-geltPurple-light/20">
+  return (
+    <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-white to-geltPurple-light/20">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-violet-900">Benefits of GELT</h2>
@@ -64,9 +80,13 @@ const FeaturesSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((feature, index) => <GlowingFeatureCard key={index} feature={feature} index={index} />)}
+          {features.map((feature, index) => (
+            <GlowingFeatureCard key={index} feature={feature} index={index} />
+          ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default FeaturesSection;
