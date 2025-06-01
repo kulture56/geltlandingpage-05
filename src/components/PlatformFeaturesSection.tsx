@@ -65,7 +65,7 @@ const PlatformFeaturesSection = () => {
   return <section className="relative">
       <div className="text-center pt-12 pb-6">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-violet-900">Platform Features</h2>
-        <p className="text-lg max-w-2xl mx-auto text-zinc-950">Discover the powerful features that GELT offers to help you build wealth and financial literacy</p>
+        <p className="text-lg max-w-2xl mx-auto text-zinc-950">Discover the powerful resources that GELT offers to help you build the community, mindset and financial literacy among Kenyans.</p>
       </div>
       <RadialOrbitalTimeline timelineData={timelineData} />
     </section>;
