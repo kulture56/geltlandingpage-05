@@ -21,11 +21,11 @@ const Privacy = () => {
             <h2 className="text-xl font-semibold mb-4 text-purple-900">1. Information We Collect</h2>
             <p className="mb-4 text-zinc-950">We collect the following types of information to provide and improve our services:</p>
             <ul className="list-disc ml-5 mb-6 text-gray-600 space-y-2">
-              <li><strong>Personal Information:</strong> Full name, username, email, bio, investment interests (entered in Account > Profile), and connected account details (e.g., Google, Apple IDs).</li>
+              <li><strong>Personal Information:</strong> Full name, username, email, bio, investment interests (entered in Account &gt; Profile), and connected account details (e.g., Google, Apple IDs).</li>
               <li><strong>User-Generated Content:</strong> Posts, replies, polls, and messages created in the Home feed or Messages section; Streaks answers and shared achievements; and job applications submitted via the Career Hub.</li>
               <li><strong>Usage Data:</strong> Interactions with features (e.g., likes, bookmarks, notification preferences, video views in the Learning Center, Glossary searches, Streaks participation).</li>
               <li><strong>Device and Technical Data:</strong> IP address, browser type, device information, and app usage data (e.g., time spent on features).</li>
-              <li><strong>Cookies and Tracking:</strong> We use cookies to enhance navigation, personalize content (e.g., Home feed recommendations), and analyze usage. You can manage cookie preferences in Account > Settings > Preferences.</li>
+              <li><strong>Cookies and Tracking:</strong> We use cookies to enhance navigation, personalize content (e.g., Home feed recommendations), and analyze usage. You can manage cookie preferences in Account &gt; Settings &gt; Preferences.</li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">2. How We Use Your Information</h2>
@@ -43,7 +43,7 @@ const Privacy = () => {
             <ul className="list-disc ml-5 mb-6 text-gray-600 space-y-2">
               <li>Rafiki AI processes your queries (e.g., via the Glossary's "Ask Rafiki" option) to provide educational insights. Queries are anonymized and may be used to train Rafiki, with no personally identifiable information stored.</li>
               <li>Rafiki does not provide personalized financial advice. All responses include a disclaimer to consult a CMA-licensed advisor.</li>
-              <li>You can opt out of data usage for Rafiki training in Account > Settings > Security & Privacy.</li>
+              <li>You can opt out of data usage for Rafiki training in Account &gt; Settings &gt; Security &amp; Privacy.</li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">4. Data Sharing</h2>
@@ -64,10 +64,10 @@ const Privacy = () => {
             <h2 className="text-xl font-semibold mb-4 text-purple-900">6. Your Data Rights</h2>
             <p className="mb-4 text-zinc-950">Under Kenya's Data Protection Act (2019), you have the right to:</p>
             <ul className="list-disc ml-5 mb-6 text-gray-600 space-y-2">
-              <li>Access your personal data via Account > Settings > Security & Privacy.</li>
+              <li>Access your personal data via Account &gt; Settings &gt; Security &amp; Privacy.</li>
               <li>Request a data export in a machine-readable format.</li>
-              <li>Delete your account and associated data through Account > Settings.</li>
-              <li>Opt out of non-essential data uses, such as analytics or Rafiki AI training. To exercise these rights, contact us via Account > Help Center > Contact Support.</li>
+              <li>Delete your account and associated data through Account &gt; Settings.</li>
+              <li>Opt out of non-essential data uses, such as analytics or Rafiki AI training. To exercise these rights, contact us via Account &gt; Help Center &gt; Contact Support.</li>
             </ul>
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">7. Children's Privacy</h2>
@@ -77,7 +77,7 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">8. Cookies and Tracking</h2>
             <p className="mb-6 text-zinc-950">
-              We use cookies for essential functions (e.g., login sessions), personalization (e.g., Home feed), and analytics. You can disable non-essential cookies in Account > Settings > Preferences, though this may limit some features.
+              We use cookies for essential functions (e.g., login sessions), personalization (e.g., Home feed), and analytics. You can disable non-essential cookies in Account &gt; Settings &gt; Preferences, though this may limit some features.
             </p>
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">9. Data Retention</h2>
@@ -88,7 +88,7 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">10. Third-Party Integrations</h2>
             <p className="mb-6 text-zinc-950">
-              GELT integrates with Supabase for backend services (e.g., database, authentication) and Google/Apple for account connections. These integrations involve data sharing as described in Section 4. You can manage connected accounts in Account > Settings > Connected Accounts.
+              GELT integrates with Supabase for backend services (e.g., database, authentication) and Google/Apple for account connections. These integrations involve data sharing as described in Section 4. You can manage connected accounts in Account &gt; Settings &gt; Connected Accounts.
             </p>
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">11. Feature-Specific Data Practices</h2>
@@ -120,7 +120,7 @@ const Privacy = () => {
 
             <h2 className="text-xl font-semibold mb-4 text-purple-900">15. Contact Us</h2>
             <p className="mb-6 text-zinc-950">
-              For questions, concerns, or to exercise your data rights, contact our support team via Account > Help Center > Contact Support or email [insert email address]. You may also contact Kenya's Office of the Data Protection Commissioner for complaints.
+              For questions, concerns, or to exercise your data rights, contact our support team via Account &gt; Help Center &gt; Contact Support or email [insert email address]. You may also contact Kenya's Office of the Data Protection Commissioner for complaints.
             </p>
           </div>
 

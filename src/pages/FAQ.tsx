@@ -137,7 +137,7 @@ const FAQ = () => {
                   <span className="text-lg text-left font-bold text-violet-900">How do I manage notifications on GELT?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  In the Notifications section, view all or unread notifications (e.g., likes, replies, mentions). Customize notification frequency and types in Account > Settings > Preferences to suit your needs.
+                  In the Notifications section, view all or unread notifications (e.g., likes, replies, mentions). Customize notification frequency and types in Account &gt; Settings &gt; Preferences to suit your needs.
                 </AccordionContent>
               </AccordionItem>
 
@@ -185,7 +185,6 @@ const FAQ = () => {
             </Accordion>
           </div>
 
-          {/* Continue with other sections... */}
           {/* Kenyan Financial Context Section */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-4 text-purple-900">Kenyan Financial Context</h2>
@@ -219,7 +218,7 @@ const FAQ = () => {
                   <span className="text-lg text-left text-violet-900 font-bold">What are the benefits of a premium subscription?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  Premium users access advanced analytics (e.g., investment tracking insights), exclusive Learning Center content, and group streaks (compete with up to 10 friends). Upgrade via Account > Settings or check subscription details on the GELT website.
+                  Premium users access advanced analytics (e.g., investment tracking insights), exclusive Learning Center content, and group streaks (compete with up to 10 friends). Upgrade via Account &gt; Settings or check subscription details on the GELT website.
                 </AccordionContent>
               </AccordionItem>
 
@@ -243,7 +242,7 @@ const FAQ = () => {
                   <span className="text-lg text-left text-violet-900 font-bold">What should I do if I can't log in to GELT?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  Check your email and password, or use the "Forgot Password" option to reset your credentials. Ensure your app is updated via the Google Play Store or Apple App Store. If issues persist, contact support via Account > Help Center > Contact Support.
+                  Check your email and password, or use the "Forgot Password" option to reset your credentials. Ensure your app is updated via the Google Play Store or Apple App Store. If issues persist, contact support via Account &gt; Help Center &gt; Contact Support.
                 </AccordionContent>
               </AccordionItem>
 
@@ -267,7 +266,7 @@ const FAQ = () => {
                   <span className="text-lg text-left text-violet-900 font-bold">What are GELT's Community Guidelines?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  GELT's Community Guidelines, found in Account > Help Center, prohibit harmful content like violence, hate speech, spam, and impersonation. Follow these rules to maintain a respectful community. Report violations using the report option on posts or profiles.
+                  GELT's Community Guidelines, found in Account &gt; Help Center, prohibit harmful content like violence, hate speech, spam, and impersonation. Follow these rules to maintain a respectful community. Report violations using the report option on posts or profiles.
                 </AccordionContent>
               </AccordionItem>
 
@@ -285,7 +284,7 @@ const FAQ = () => {
                     <li>Spam: Fake accounts, scams, bots, malicious links</li>
                     <li>Suicide and Self Harm: Content promoting or instructing self-harm</li>
                     <li>Impersonation: Pretending to be someone else, including misleading fan or parody accounts</li>
-                    <li>Extremism & Terrorism: Support or promotion of hate groups or extremist networks</li>
+                    <li>Extremism &amp; Terrorism: Support or promotion of hate groups or extremist networks</li>
                   </ul>
                 </AccordionContent>
               </AccordionItem>
@@ -295,7 +294,7 @@ const FAQ = () => {
                   <span className="text-lg text-left text-violet-900 font-bold">How do I report an account or post on GELT?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  To report an account or post, navigate to the specific post or user profile and click the "Report" option (accessible via the post or profile menu). Select the reason for reporting (e.g., hate speech, spam, impersonation) from the provided categories. Submit the report, and GELT's moderation team will review it within 24-48 hours. You will be notified of the outcome via email or in-app notifications. For urgent issues, contact support through Account > Help Center > Contact Support.
+                  To report an account or post, navigate to the specific post or user profile and click the "Report" option (accessible via the post or profile menu). Select the reason for reporting (e.g., hate speech, spam, impersonation) from the provided categories. Submit the report, and GELT's moderation team will review it within 24-48 hours. You will be notified of the outcome via email or in-app notifications. For urgent issues, contact support through Account &gt; Help Center &gt; Contact Support.
                 </AccordionContent>
               </AccordionItem>
 
@@ -319,7 +318,7 @@ const FAQ = () => {
                   <span className="text-lg text-left text-violet-900 font-bold">Does GELT support Swahili or other local languages?</span>
                 </AccordionTrigger>
                 <AccordionContent className="px-6 pb-4 text-gray-600">
-                  GELT currently supports English, with plans to add Swahili translations for the Glossary, Learning Center, and FAQs to better serve Kenyan users. Adjust your language preference in Account > Settings > Preferences.
+                  GELT currently supports English, with plans to add Swahili translations for the Glossary, Learning Center, and FAQs to better serve Kenyan users. Adjust your language preference in Account &gt; Settings &gt; Preferences.
                 </AccordionContent>
               </AccordionItem>
 

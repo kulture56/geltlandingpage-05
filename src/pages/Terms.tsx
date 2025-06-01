@@ -52,12 +52,12 @@ const Terms = () => {
 
             <h2 className="text-xl font-semibold mb-4 text-violet-900">8. Premium Features</h2>
             <p className="mb-6 text-zinc-950">
-              GELT offers premium features (e.g., group streaks, advanced analytics) through a subscription model. Subscription terms, including fees, billing, and cancellation, are detailed in the Account > Settings section. You agree to comply with these terms when accessing premium features.
+              GELT offers premium features (e.g., group streaks, advanced analytics) through a subscription model. Subscription terms, including fees, billing, and cancellation, are detailed in the Account &gt; Settings section. You agree to comply with these terms when accessing premium features.
             </p>
 
             <h2 className="text-xl font-semibold mb-4 text-violet-900">9. Data Protection</h2>
             <p className="mb-6 text-zinc-950">
-              GELT complies with Kenya's Data Protection Act (2019). You have the right to access, export, or delete your personal data via Account > Settings > Security & Privacy. Data used for Rafiki AI training is anonymized and processed in accordance with our Privacy Policy.
+              GELT complies with Kenya's Data Protection Act (2019). You have the right to access, export, or delete your personal data via Account &gt; Settings &gt; Security &amp; Privacy. Data used for Rafiki AI training is anonymized and processed in accordance with our Privacy Policy.
             </p>
 
             <h2 className="text-xl font-semibold mb-4 text-violet-900">10. Rafiki AI Usage</h2>
