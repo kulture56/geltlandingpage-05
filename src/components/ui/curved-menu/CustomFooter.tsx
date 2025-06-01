@@ -1,6 +1,8 @@
-import React from "react";
-import { Linkedin, Github, Dribbble, Figma } from "lucide-react";
+
+import React from 'react';
+
 const CustomFooter: React.FC = () => {
-  return;
+  return null;
 };
+
 export default CustomFooter;

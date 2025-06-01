@@ -1,5 +1,6 @@
 
-import { Shield, TrendingUp, MessageSquare, BookOpen } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { cn } from "@/lib/utils";
 
 const features = [{
   iconSrc: "/lovable-uploads/f9ff53da-960f-44e2-a008-c367965e0034.png",
@@ -23,8 +24,55 @@ const features = [{
   description: "Enjoy peace of mind with our secure platform designed to protect your information and investments."
 }];
 
+interface GlowingFeatureCardProps {
+  feature: typeof features[0];
+  index: number;
+}
+
+const GlowingFeatureCard = ({ feature, index }: GlowingFeatureCardProps) => {
+  return (
+    <div className="min-h-[18rem] list-none">
+      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-gray-200 p-2 md:rounded-[1.5rem] md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={3}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-white p-6 shadow-sm">
+          <div className="relative flex flex-1 flex-col justify-between gap-4">
+            <div className="flex justify-center">
+              <div className="w-fit rounded-lg border-[0.75px] border-gray-200 bg-gray-50 p-3">
+                <img 
+                  src={feature.iconSrc} 
+                  alt={feature.title} 
+                  className="w-8 h-8"
+                />
+              </div>
+            </div>
+            <div className="space-y-3 text-center">
+              <h3 className="text-xl leading-[1.375rem] font-bold font-sans tracking-[-0.04em] md:text-xl md:leading-[1.875rem] text-balance text-gray-900">
+                {feature.title}
+              </h3>
+              <p className="text-sm text-geltPurple font-medium">
+                {feature.subtitle}
+              </p>
+              <p className="font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-gray-600">
+                {feature.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const FeaturesSection = () => {
-  return <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-white to-geltPurple-light/20">
+  return (
+    <section id="features" className="py-16 md:py-24 bg-gradient-to-b from-white to-geltPurple-light/20">
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-violet-900">Benefits of GELT</h2>
@@ -33,24 +81,14 @@ const FeaturesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-100">
-              <div className="flex justify-center mb-4">
-                <img 
-                  src={feature.iconSrc} 
-                  alt={feature.title} 
-                  className="w-16 h-16 text-geltPurple"
-                />
-              </div>
-              <h3 className="font-bold text-xl mb-1 text-center">{feature.title}</h3>
-              <p className="text-sm text-geltPurple mb-3 text-center">{feature.subtitle}</p>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
+            <GlowingFeatureCard key={index} feature={feature} index={index} />
           ))}
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default FeaturesSection;
