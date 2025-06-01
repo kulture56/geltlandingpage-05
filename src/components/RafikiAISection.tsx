@@ -93,7 +93,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-zinc-950">24/7 financial guidance tailored to Kenyan markets</span>
+                <span className="text-zinc-950">24/7 financial guidance tailored to Kenyan markets.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -101,7 +101,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-zinc-950">Explains complex investment concepts in simple terms</span>
+                <span className="text-zinc-950">Explains complex investment concepts in simple terms.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -109,7 +109,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-zinc-950">Connects you with relevant GELT community members</span>
+                <span className="text-zinc-950">Connects you with relevant GELT resources.</span>
               </li>
               <li className="flex items-start gap-3">
                 <div className="bg-geltPurple-light p-1 rounded-full">
@@ -117,7 +117,7 @@ const RafikiAISection = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                   </svg>
                 </div>
-                <span className="text-zinc-950">Provides real-time market updates and analysis</span>
+                <span className="text-zinc-950">Provides real-time market updates and analysis.</span>
               </li>
             </ul>
             {!showChat && <Button onClick={() => setShowChat(true)} className="bg-geltPurple hover:bg-geltPurple-600 md:hidden">

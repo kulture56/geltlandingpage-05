@@ -1,17 +1,14 @@
-
 import { Link } from "react-router-dom";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+  return <footer className="text-white pt-16 pb-8 bg-purple-950">
       <div className="container px-4 mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div className="col-span-2">
-            <div className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-geltPurple">GELT</span>
-              <span className="ml-2 text-sm text-gray-400">Kenyan Invest Hub</span>
+            <div className="flex items-center mb-4 bg-purple-950">
+              <span className="text-2xl font-bold text-slate-50">GELT</span>
+              <span className="ml-2 text-sm text-slate-50">Kenyan Invest Hub</span>
             </div>
-            <p className="text-gray-400 mb-4 max-w-sm">
+            <p className="mb-4 max-w-sm text-slate-50">
               Kenya's premier social-fintech platform empowering local investors through community, education, and opportunities.
             </p>
             <div className="flex gap-4">
@@ -39,7 +36,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-4">About</h3>
+            <h3 className="text-lg font-bold mb-4 text-slate-50">About</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Our Story</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Team</a></li>
@@ -71,11 +68,11 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+          <p className="text-sm mb-4 md:mb-0 text-slate-50">
             © 2025 GELT. All rights reserved. Made with ❤️ in Nairobi.
           </p>
           <div className="flex items-center">
-            <span className="text-gray-500 text-sm mr-2">Language:</span>
+            <span className="text-sm mr-2 text-slate-50">Language:</span>
             <select className="bg-gray-800 text-gray-400 text-sm py-1 px-2 rounded border border-gray-700">
               <option value="en">English</option>
               <option value="sw">Kiswahili</option>
@@ -83,8 +80,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

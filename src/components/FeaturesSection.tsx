@@ -60,9 +60,7 @@ const FeaturesSection = () => {
       <div className="container px-4 mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-violet-900">Benefits of GELT</h2>
-          <p className="text-lg max-w-2xl mx-auto text-zinc-950">
-            Our platform combines social connection with financial empowerment to create a uniquely Kenyan investment experience.
-          </p>
+          <p className="text-lg max-w-2xl mx-auto text-zinc-950">Our platform combines social connection with financial empowerment to create a uniquely Kenyan community investment experience.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
