@@ -30,9 +30,9 @@ const GlowingFeatureCard = ({
   index
 }: GlowingFeatureCardProps) => {
   return <div className="min-h-[18rem] list-none">
-      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-gray-200 p-2 md:rounded-[1.5rem] md:p-3 bg-purple-900">
+      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-gray-200 p-2 md:rounded-[1.5rem] md:p-3 bg-slate-100">
         <GlowingEffect spread={40} glow={true} disabled={false} proximity={64} inactiveZone={0.01} borderWidth={3} />
-        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-white p-6 shadow-sm">
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] p-6 shadow-sm bg-zinc-950">
           <div className="relative flex flex-1 flex-col justify-between gap-4">
             <div className="flex justify-center">
               <div className="w-fit rounded-lg border-[0.75px] border-gray-200 bg-gray-50 p-3">
