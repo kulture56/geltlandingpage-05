@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GradientCardSection from "@/components/GradientCardSection";
@@ -11,6 +10,7 @@ import SocialSection from "@/components/SocialSection";
 import CallToAction from "@/components/CallToAction";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
+import TrendingTopicsSection from "@/components/TrendingTopicsSection";
 
 const Index = () => {
   return (
@@ -23,6 +23,7 @@ const Index = () => {
       <RafikiAISection />
       <CommunitySection />
       <TestimonialsSection />
+      <TrendingTopicsSection />
       <SocialSection />
       <CallToAction />
       <NewsletterSection />
