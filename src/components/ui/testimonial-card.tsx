@@ -30,7 +30,7 @@ export function TestimonialCard({
           <h3 className="text-md font-semibold leading-none">
             {author.name}
           </h3>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-zinc-950">
             {author.position}
           </p>
         </div>
