@@ -12,7 +12,7 @@ const socials = [
   },
   {
     name: "X",
-    image: "https://link-hover-lndev.vercel.app/twitter.png",
+    image: "/lovable-uploads/ee85f57e-7985-457c-834e-c816c79baeea.png",
   },
   {
     name: "TikTok",

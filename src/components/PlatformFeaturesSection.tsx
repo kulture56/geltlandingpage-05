@@ -1,10 +1,12 @@
+
 import { Home, Briefcase, GraduationCap, Book, TrendingUp, Bolt } from "lucide-react";
 import RadialOrbitalTimeline from "@/components/ui/radial-orbital-timeline";
+
 const timelineData = [{
   id: 1,
   title: "Home Dashboard",
   date: "Available Now",
-  content: "Your main dashboard. A personalized feed showing updates, featured tools, financial news, and quick access to the platform's core features.",
+  content: "Your personalized feed showing updates from your favorite GELTERs. Share your financial story or thoughts. Quick access to Rafiki your AI investment assistant. #safariyako",
   category: "Dashboard",
   icon: Home,
   relatedIds: [3, 5],
@@ -14,7 +16,7 @@ const timelineData = [{
   id: 2,
   title: "Career Hub",
   date: "Available Now",
-  content: "Explore verified jobs and internship opportunities —curated for Kenyan professionals and students.",
+  content: "Unemployed? looking for an internship or attachment? want to change your career? navigate your way to the career hub section filter jobs to your preferences apply and manifest. #kazikwawote",
   category: "Careers",
   icon: Briefcase,
   relatedIds: [1, 3],
@@ -24,7 +26,7 @@ const timelineData = [{
   id: 3,
   title: "Learning Center",
   date: "Available Now",
-  content: "Your go-to section for investing education. Offers lessons, short courses, and guides to help users understand Kenyan and global financial markets.",
+  content: "Video za how to invest in...., soma offline on your way to/from work, binge-learn to build your wealth understanding Kenyan and Global financial markets. #Jifunze",
   category: "Education",
   icon: GraduationCap,
   relatedIds: [1, 4, 5],
@@ -34,7 +36,7 @@ const timelineData = [{
   id: 4,
   title: "Financial Glossary",
   date: "Coming Soon",
-  content: "A simplified dictionary of financial terms. This section helps users decode financial jargon.",
+  content: "Jisomeshe maneno ya kifedha. Je unajua Money Market Funds kwa swahili zinaitwa aje? #Jielimu",
   category: "Education",
   icon: Book,
   relatedIds: [3, 6],
@@ -44,7 +46,7 @@ const timelineData = [{
   id: 5,
   title: "Streaks & Rewards",
   date: "Coming Soon",
-  content: "Tracks your learning and engagement progress. Earn points and unlock badges for daily logins, completed lessons, or quiz wins. Keeps learning fun and consistent.",
+  content: "Compete with other members in the platform. Earn points and badges for daily streaks. Keep learning stay commited. #Jijenge",
   category: "Engagement",
   icon: Bolt,
   relatedIds: [1, 3],
@@ -54,13 +56,14 @@ const timelineData = [{
   id: 6,
   title: "Trending Categories",
   date: "Coming Soon",
-  content: "See what's buzzing in the GELT community. Real-time updates on popular discussions and investment trends.",
+  content: "See what's buzzzing in the community. Real-time updates on investment trends & market news. #mitindo",
   category: "Community",
   icon: TrendingUp,
   relatedIds: [1, 4],
   status: "pending" as const,
   energy: 30
 }];
+
 const PlatformFeaturesSection = () => {
   return <section className="relative">
       <div className="text-center pt-12 pb-6">
@@ -70,4 +73,5 @@ const PlatformFeaturesSection = () => {
       <RadialOrbitalTimeline timelineData={timelineData} />
     </section>;
 };
+
 export default PlatformFeaturesSection;

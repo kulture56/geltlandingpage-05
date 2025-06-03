@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GradientCardSection from "@/components/GradientCardSection";
@@ -11,6 +12,7 @@ import CallToAction from "@/components/CallToAction";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 import TrendingTopicsSection from "@/components/TrendingTopicsSection";
+import { FloatingSocial } from "@/components/ui/floating-social";
 
 const Index = () => {
   return (
@@ -28,6 +30,7 @@ const Index = () => {
       <CallToAction />
       <NewsletterSection />
       <Footer />
+      <FloatingSocial />
     </div>
   );
 };

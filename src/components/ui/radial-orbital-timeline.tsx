@@ -3,6 +3,7 @@ import { ArrowRight, Link, Zap } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 interface TimelineItem {
   id: number;
   title: string;
@@ -14,9 +15,11 @@ interface TimelineItem {
   status: "completed" | "in-progress" | "pending";
   energy: number;
 }
+
 interface RadialOrbitalTimelineProps {
   timelineData: TimelineItem[];
 }
+
 export default function RadialOrbitalTimeline({
   timelineData
 }: RadialOrbitalTimelineProps) {
@@ -44,6 +47,7 @@ export default function RadialOrbitalTimeline({
       setAutoRotate(true);
     }
   };
+
   const toggleItem = (id: number) => {
     setExpandedItems(prev => {
       const newState = {
@@ -73,6 +77,7 @@ export default function RadialOrbitalTimeline({
       return newState;
     });
   };
+
   useEffect(() => {
     let rotationTimer: NodeJS.Timeout;
     if (autoRotate && viewMode === "orbital") {
@@ -185,9 +190,9 @@ export default function RadialOrbitalTimeline({
 
                 <div className={`
                   absolute top-12 left-1/2 -translate-x-1/2 whitespace-nowrap
-                  text-xs font-semibold tracking-wider
+                  text-xs font-bold tracking-wider
                   transition-all duration-300
-                  ${isExpanded ? "text-white scale-125" : "text-white/70"}
+                  ${isExpanded ? "text-white scale-125 drop-shadow-lg" : "text-white drop-shadow-md"}
                 `}>
                   {item.title}
                 </div>
@@ -195,18 +200,12 @@ export default function RadialOrbitalTimeline({
                 {isExpanded && <Card className="absolute top-20 left-1/2 -translate-x-1/2 w-64 bg-black/90 backdrop-blur-lg border-white/30 shadow-xl shadow-white/10 overflow-visible">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-px h-3 bg-white/50"></div>
                     <CardHeader className="pb-2">
-                      <div className="flex justify-between items-center">
-                        
-                        
-                      </div>
-                      <CardTitle className="text-sm mt-2">
+                      <CardTitle className="text-sm mt-2 text-white font-bold">
                         {item.title}
                       </CardTitle>
                     </CardHeader>
-                    <CardContent className="text-xs text-white/80">
-                      <p>{item.content}</p>
-
-                      
+                    <CardContent className="text-xs text-white">
+                      <p className="font-medium">{item.content}</p>
 
                       {item.relatedIds.length > 0 && <div className="mt-4 pt-3 border-t border-white/10">
                           <div className="flex items-center mb-2">
@@ -218,7 +217,7 @@ export default function RadialOrbitalTimeline({
                           <div className="flex flex-wrap gap-1">
                             {item.relatedIds.map(relatedId => {
                       const relatedItem = timelineData.find(i => i.id === relatedId);
-                      return <Button key={relatedId} variant="outline" size="sm" className="flex items-center h-6 px-2 py-0 text-xs rounded-none border-white/20 bg-transparent hover:bg-white/10 text-white/80 hover:text-white transition-all" onClick={e => {
+                      return <Button key={relatedId} variant="outline" size="sm" className="flex items-center h-6 px-2 py-0 text-xs rounded-none border-white/20 bg-transparent hover:bg-white/10 text-white hover:text-white transition-all font-medium" onClick={e => {
                         e.stopPropagation();
                         toggleItem(relatedId);
                       }}>

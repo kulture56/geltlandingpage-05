@@ -57,7 +57,7 @@ const TrendingTopicsSection = () => {
         }
       `}</style>
       
-      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative z-10">
         <div className="container px-4 mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-900">
@@ -69,9 +69,9 @@ const TrendingTopicsSection = () => {
           </div>
 
           {/* Main Grid - All 6 topics in a responsive grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto relative z-20">
             {trendingTopics.map((topic, index) => (
-              <div key={index} className="h-[25rem] flex items-center justify-center">
+              <div key={index} className="h-[25rem] flex items-center justify-center relative z-30">
                 <PinContainer title={`Explore ${topic.name}`}>
                   <div className="flex flex-col p-6 tracking-tight text-slate-100/50 w-[18rem] h-[18rem] bg-gradient-to-b from-slate-800/50 to-slate-800/0 backdrop-blur-sm border border-slate-700/50 rounded-2xl">
                     {/* Header */}
