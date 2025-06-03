@@ -48,21 +48,7 @@ const CommunitySection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Trending Topics */}
-          <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
-            <h3 className="text-xl font-bold mb-6 flex items-center">
-              <TrendingUp className="h-5 w-5 mr-2 text-geltPurple" />
-              Trending Topics
-            </h3>
-            <ul className="space-y-4">
-              {trendingTopics.map((topic, index) => <li key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last:border-0">
-                  <span className="text-purple-900 font-semibold">#{topic.name}</span>
-                  <div className="flex items-center">
-                    <span className="text-sm mr-3 text-zinc-950 font-semibold">{topic.posts} posts</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">{topic.growth}</span>
-                  </div>
-                </li>)}
-            </ul>
-          </div>
+          
 
           {/* Recent Posts */}
           <div className="lg:col-span-2">
