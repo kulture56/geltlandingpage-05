@@ -5,6 +5,7 @@ import GradientCardSection from "@/components/GradientCardSection";
 import PlatformFeaturesSection from "@/components/PlatformFeaturesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import RafikiAISection from "@/components/RafikiAISection";
+import WhoCanJoinSection from "@/components/WhoCanJoinSection";
 import CommunitySection from "@/components/CommunitySection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import SocialSection from "@/components/SocialSection";
@@ -23,6 +24,7 @@ const Index = () => {
       <PlatformFeaturesSection />
       <FeaturesSection />
       <RafikiAISection />
+      <WhoCanJoinSection />
       <CommunitySection />
       <TestimonialsSection />
       <TrendingTopicsSection />
