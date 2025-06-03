@@ -1,42 +1,27 @@
-
-import { cn } from "@/lib/utils"
-import { Avatar, AvatarImage } from "@/components/ui/avatar"
-
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 export interface TestimonialAuthor {
-  name: string
-  handle: string
-  position: string
-  avatar: string
+  name: string;
+  handle: string;
+  position: string;
+  avatar: string;
 }
-
 export interface TestimonialCardProps {
-  author: TestimonialAuthor
-  text: string
-  href?: string
-  className?: string
+  author: TestimonialAuthor;
+  text: string;
+  href?: string;
+  className?: string;
 }
-
-export function TestimonialCard({ 
+export function TestimonialCard({
   author,
   text,
   href,
   className
 }: TestimonialCardProps) {
-  const Card = href ? 'a' : 'div'
-  
-  return (
-    <Card
-      {...(href ? { href } : {})}
-      className={cn(
-        "flex flex-col rounded-lg border-t",
-        "bg-gradient-to-b from-muted/50 to-muted/10",
-        "p-4 text-start sm:p-6",
-        "hover:from-muted/60 hover:to-muted/20",
-        "max-w-[320px] sm:max-w-[320px]",
-        "transition-colors duration-300",
-        className
-      )}
-    >
+  const Card = href ? 'a' : 'div';
+  return <Card {...href ? {
+    href
+  } : {}} className={cn("flex flex-col rounded-lg border-t", "bg-gradient-to-b from-muted/50 to-muted/10", "p-4 text-start sm:p-6", "hover:from-muted/60 hover:to-muted/20", "max-w-[320px] sm:max-w-[320px]", "transition-colors duration-300", className)}>
       <div className="flex items-center gap-3">
         <Avatar className="h-12 w-12">
           <AvatarImage src={author.avatar} alt={author.name} />
@@ -50,9 +35,8 @@ export function TestimonialCard({
           </p>
         </div>
       </div>
-      <p className="sm:text-md mt-4 text-sm text-muted-foreground">
+      <p className="sm:text-md mt-4 text-sm text-purple-950">
         {text}
       </p>
-    </Card>
-  )
+    </Card>;
 }
