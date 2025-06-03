@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 
 interface ImageSwiperProps {
   images: string;
+  titles?: string[];
   cardWidth?: number;
   cardHeight?: number;
   className?: string;
@@ -10,6 +11,7 @@ interface ImageSwiperProps {
 
 export const ImageSwiper: React.FC<ImageSwiperProps> = ({
   images,
+  titles = [],
   cardWidth = 256,  // 16rem = 256px
   cardHeight = 352, // 22rem = 352px
   className = ''
@@ -166,6 +168,12 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
     updatePositions();
   }, [cardOrder, updatePositions]);
 
+  const getCurrentTitle = () => {
+    if (titles.length === 0) return '';
+    const activeIndex = cardOrder[0];
+    return titles[activeIndex] || '';
+  };
+
   return (
     <section
       className={`relative grid place-content-center select-none ${className}`}
@@ -187,7 +195,7 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
           key={`${imageList[originalIndex]}-${originalIndex}`}
           className="image-card absolute cursor-grab active:cursor-grabbing
                      place-self-center border border-slate-400 rounded-xl
-                     shadow-md overflow-hidden will-change-transform"
+                     shadow-md overflow-hidden will-change-transform bg-white"
           style={{
             '--i': (displayIndex + 1).toString(),
             zIndex: imageList.length - displayIndex,
@@ -200,6 +208,15 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
                        rotateY(var(--swipe-rotate, 0deg))`
           } as React.CSSProperties}
         >
+          {titles.length > 0 && (
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="bg-white rounded-lg px-4 py-2 shadow-lg border-2 border-geltPurple">
+                <h3 className="text-geltPurple font-bold text-lg text-center">
+                  {titles[originalIndex]}
+                </h3>
+              </div>
+            </div>
+          )}
           <img
             src={imageList[originalIndex]}
             alt={`Swiper image ${originalIndex + 1}`}
