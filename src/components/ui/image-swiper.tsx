@@ -7,20 +7,25 @@ interface ImageSwiperProps {
   cardWidth?: number;
   cardHeight?: number;
   className?: string;
+  autoSwipe?: boolean;
+  autoSwipeInterval?: number;
 }
 
 export const ImageSwiper: React.FC<ImageSwiperProps> = ({
   images,
   titles = [],
-  cardWidth = 256,  // 16rem = 256px
-  cardHeight = 352, // 22rem = 352px
-  className = ''
+  cardWidth = 256,
+  cardHeight = 352, 
+  className = '',
+  autoSwipe = false,
+  autoSwipeInterval = 2000
 }) => {
   const cardStackRef = useRef<HTMLDivElement>(null);
   const isSwiping = useRef(false);
   const startX = useRef(0);
   const currentX = useRef(0);
   const animationFrameId = useRef<number | null>(null);
+  const autoSwipeTimer = useRef<NodeJS.Timeout | null>(null);
 
   const imageList = images.split(',').map(img => img.trim()).filter(img => img);
   const [cardOrder, setCardOrder] = useState<number[]>(() =>
@@ -69,6 +74,32 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
     card.style.opacity = (1 - Math.min(Math.abs(deltaX) / 100, 1) * 0.75).toString();
   }, [getActiveCard]);
 
+  const swipeToNext = useCallback(() => {
+    if (isSwiping.current) return;
+    
+    const duration = getDurationFromCSS('--card-swap-duration', cardStackRef.current);
+    const card = getActiveCard();
+
+    if (card) {
+      card.style.transition = `transform ${duration}ms ease, opacity ${duration}ms ease`;
+      card.style.setProperty('--swipe-x', '300px');
+      card.style.setProperty('--swipe-rotate', '20deg');
+
+      setTimeout(() => {
+        if (getActiveCard() === card) {
+          card.style.setProperty('--swipe-rotate', '-20deg');
+        }
+      }, duration * 0.5);
+
+      setTimeout(() => {
+        setCardOrder(prev => {
+          if (prev.length === 0) return [];
+          return [...prev.slice(1), prev[0]];
+        });
+      }, duration);
+    }
+  }, [getDurationFromCSS, getActiveCard]);
+
   const handleStart = useCallback((clientX: number) => {
     if (isSwiping.current) return;
     isSwiping.current = true;
@@ -76,6 +107,12 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
     currentX.current = clientX;
     const card = getActiveCard();
     if (card) card.style.transition = 'none';
+    
+    // Clear auto swipe timer when user interacts
+    if (autoSwipeTimer.current) {
+      clearInterval(autoSwipeTimer.current);
+      autoSwipeTimer.current = null;
+    }
   }, [getActiveCard]);
 
   const handleEnd = useCallback(() => {
@@ -118,7 +155,12 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
     isSwiping.current = false;
     startX.current = 0;
     currentX.current = 0;
-  }, [getDurationFromCSS, getActiveCard, applySwipeStyles]);
+
+    // Restart auto swipe timer after user interaction
+    if (autoSwipe) {
+      autoSwipeTimer.current = setInterval(swipeToNext, autoSwipeInterval);
+    }
+  }, [getDurationFromCSS, getActiveCard, applySwipeStyles, autoSwipe, autoSwipeInterval, swipeToNext]);
 
   const handleMove = useCallback((clientX: number) => {
     if (!isSwiping.current) return;
@@ -168,11 +210,18 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
     updatePositions();
   }, [cardOrder, updatePositions]);
 
-  const getCurrentTitle = () => {
-    if (titles.length === 0) return '';
-    const activeIndex = cardOrder[0];
-    return titles[activeIndex] || '';
-  };
+  // Auto swipe effect
+  useEffect(() => {
+    if (autoSwipe && !isSwiping.current) {
+      autoSwipeTimer.current = setInterval(swipeToNext, autoSwipeInterval);
+    }
+
+    return () => {
+      if (autoSwipeTimer.current) {
+        clearInterval(autoSwipeTimer.current);
+      }
+    };
+  }, [autoSwipe, autoSwipeInterval, swipeToNext]);
 
   return (
     <section
@@ -208,15 +257,6 @@ export const ImageSwiper: React.FC<ImageSwiperProps> = ({
                        rotateY(var(--swipe-rotate, 0deg))`
           } as React.CSSProperties}
         >
-          {titles.length > 0 && (
-            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
-              <div className="bg-white rounded-lg px-4 py-2 shadow-lg border-2 border-geltPurple">
-                <h3 className="text-geltPurple font-bold text-lg text-center">
-                  {titles[originalIndex]}
-                </h3>
-              </div>
-            </div>
-          )}
           <img
             src={imageList[originalIndex]}
             alt={`Swiper image ${originalIndex + 1}`}
